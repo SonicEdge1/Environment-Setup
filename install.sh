@@ -1,4 +1,5 @@
 #!/bin/bash
+# checked out from test branch
 # bash script to install additional tools regularily needed for new ubuntu installs or VM's
 
 # installs visual studio code
