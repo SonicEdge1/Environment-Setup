@@ -16,4 +16,6 @@ rm ./google-chrome-stable_current_amd64.deb
 # install git & gitk
 sudo apt install git -y
 sudo apt install gitk -y
+# installing terminator terminal
+sudo apt install terminator -y
 #Adding additional comment for version testing
