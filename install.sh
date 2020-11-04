@@ -26,3 +26,4 @@ sudo apt install terminator -y
 sudo apt install ./zoom_amd64.deb -y
 
 #Adding additional comment for version testing
+echo "Thank you for using the v3 installer!"
