@@ -1,7 +1,7 @@
 #!/bin/bash
 # checked out from test branch
 # bash script to install additional tools regularily needed for new ubuntu installs or VM's
-
+# adding additional comment to test version controls
 # installs visual studio code
 sudo apt update -y
 sudo apt install software-properties-common apt-transport-https wget
