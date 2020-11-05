@@ -1,3 +1,5 @@
+# Git Notes to help with version control and branch management
+
 # adds a tag to the branch that will be incremented any time a new commit is made
 git tag -a "v1.5.0" -m "version v1.5.0"
 
@@ -12,3 +14,9 @@ git show <tag>
 # squashes all commits into one while pulling all changes into the current branch
  # the current branch will then need to add and commit the work, giving a single commit message 
 git merge --squash target_branch_name
+
+# Delete Branches
+ # delete local branch  #might need to use -D to delete unstaged changes
+git branch -d <local-branch>
+ # delete remote branch
+git push origin --delete <remote-branch-name>
