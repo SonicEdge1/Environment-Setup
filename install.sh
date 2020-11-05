@@ -11,19 +11,33 @@ sudo apt update -y
 sudo apt install code -y
 # install vim
 sudo apt install vim -y
+
 # installs google chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
+
 # clean-up google chrome
 rm ./google-chrome-stable_current_amd64.deb
+
 # install git & gitk & git-gui
 sudo apt install git -y
 sudo apt install gitk -y
 sudo apt install git-gui -y
+
 # installing terminator terminal
 sudo apt install terminator -y
+
 # installing zoom
 sudo apt install ./zoom_amd64.deb -y
 
-#Adding additional comment for version testing
+# adding git bash completion -- seems to come default with git now
+# curl -L http://git.io/vfhol > ~/.git-completion.bash && echo '[ -f ~/.git-completion.bash ] && . ~/.git-completion.bash' >> ~/.bashrc
+
+# adding git prompt support
+# curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh --output ~/.git-prompt.sh
+
+
+
+
+# Adding additional comment for version testing
 echo "Thank you for using the v3 installer!"
