@@ -3,7 +3,7 @@ git tag -a "v1.5.0" -m "version v1.5.0"
 
 # shows the branch tag with the number of commits following
  # for example "v0-8-gab7f8bb"
- # the tag is "vo" the number of commits has been 8, current commit hash is gab7f8bb
+ # the tag is "v0" the number of commits has been 8, current commit hash is gab7f8bb
 git describe
 
 # shows commit history associated with the tag
@@ -12,5 +12,3 @@ git show <tag>
 # squashes all commits into one while pulling all changes into the current branch
  # the current branch will then need to add and commit the work, giving a single commit message 
 git merge --squash target_branch_name
- 
-
