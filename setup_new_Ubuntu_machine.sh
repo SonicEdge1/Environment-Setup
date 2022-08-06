@@ -172,3 +172,36 @@ choose "git-prompt https://github.com/git/git/blob/master/contrib/completion/git
 choose "any flatpak applications" install_flatpak_repo
 
 echo -e "Thank you for using the SkiCAMP installer!\n"
+###fix firefox..???
+#gimp and the svg one.
+#
+#install intellij / ******************create desktop launcher
+#https://download.jetbrains.com/idea/ideaIC-2022.2.tar.gz?_gl=1*17i5ryt*_ga*MTAzMDc1NDA4OS4xNjU5NjU2MDg4*_ga_9J976DJZ68*MTY1OTY1NjA4Ny4xLjEuMTY1OTY1NjEyNC4w&_ga=2.85439001.1276154212.1659656088-1030754089.1659656088
+
+#install docker https://docs.docker.com/engine/install/ubuntu/
+#remove any old versions:
+#sudo apt-get remove docker docker-engine docker.io containerd runc
+
+# Update the apt package index and install packages to allow apt to use a repository over HTTPS:
+#  sudo apt-get update
+#  sudo apt-get install \
+#     ca-certificates \
+#     curl \
+#     gnupg \
+#     lsb-release
+
+# Add Docker official GPG key:
+#  sudo mkdir -p /etc/apt/keyrings
+#  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+# Use the following command to set up the repository:
+#  echo \
+#   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+#   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+# Install Docker
+#  sudo apt-get update
+#  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+#  Test Install
+#   sudo docker run hello-world

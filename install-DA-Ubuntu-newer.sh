@@ -5,7 +5,7 @@
 # The "Main" functions and order they are executed in is shown at the bottom of this file.
 
 # message pace determines the pause between functions.  To run the script faster, decrease the message pace number
-MESSAGE_PACE=4
+MESSAGE_PACE=1
 DA_SERVER_ADDR=https://afrcdesktops.us.af.mil
 CERT_DOWNLOAD_DIR=/usr/share/DOD_Certs_Download
 DA_DIR=/usr/share/DesktopAnywhere_Download
@@ -60,7 +60,7 @@ check_if_root() {
 # Function checks for missing dependencies, and asks to install them if not detected.
 check_dependencies() {
     echo -e "\n[INFO] Checking system for necessary dependencies..."; sleep $MESSAGE_PACE
-    DEPS=("tar" "coreutils" "wget" "libxkbfile1" "libatk-bridge2.0-0" "libxss1" "openssl" "unzip" "libnss3-tools")
+    DEPS=("tar" "coreutils" "wget" "libxkbfile1" "libatk-bridge2.0-0" "libxss1" "openssl" "unzip" "libnss3-tools" "python2" "libudev0")
     MISSINGDEPS=()
     for i in "${DEPS[@]}"; do
     if ! dpkg-query -W -f='${Status}' "$i" 2>/dev/null | grep -q "ok installed"; then
@@ -97,6 +97,7 @@ install_card_tools() {
 	sudo apt install -y opensc opensc-pkcs11 pcsc-tools || \
         { echo -e "\n[FAIL] Failed to install necessary card tools!  Exiting." 1>&2; \
         exit 1; }
+    service pcscd start;
 	echo -e "\n[INFO] Completed install of card reader tools...\n"; sleep $MESSAGE_PACE;
 }
 
