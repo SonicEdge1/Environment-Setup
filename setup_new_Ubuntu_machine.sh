@@ -172,10 +172,13 @@ choose "git-prompt https://github.com/git/git/blob/master/contrib/completion/git
 choose "any flatpak applications" install_flatpak_repo
 
 echo -e "Thank you for using the SkiCAMP installer!\n"
-###fix firefox..???
+
 #gimp and the svg one.
 #
-#install intellij / ******************create desktop launcher
+# postman
+# https://dl.pstmn.io/download/latest/linux64
+# **create .desktop entry in /usr/share/applications
+#install intellij / ******************create desktop launcher(can do that from the intellij install in the options menu)
 #https://download.jetbrains.com/idea/ideaIC-2022.2.tar.gz?_gl=1*17i5ryt*_ga*MTAzMDc1NDA4OS4xNjU5NjU2MDg4*_ga_9J976DJZ68*MTY1OTY1NjA4Ny4xLjEuMTY1OTY1NjEyNC4w&_ga=2.85439001.1276154212.1659656088-1030754089.1659656088
 
 #install docker https://docs.docker.com/engine/install/ubuntu/
