@@ -5,15 +5,15 @@
 # The "Main" functions and order they are executed in is shown at the bottom of this file.
 
 # message pace determines the pause between functions.  To run the script faster, decrease the message pace number
-MESSAGE_PACE=1
+MESSAGE_PACE=3
 DA_SERVER_ADDR=https://afrcdesktops.us.af.mil
 CERT_DOWNLOAD_DIR=/usr/share/DOD_Certs_Download
 DA_DIR=/usr/share/DesktopAnywhere_Download
-CERT_SUB_DIR=Certificates_PKCS7_v5.9_DoD
-CERT_ZIPFILE=certificates_pkcs7_DoD.zip 
+CERT_SUB_DIR=certificates_pkcs7_v5_11_dod
+CERT_ZIPFILE=unclass-certificates_pkcs7_DoD.zip 
 CERT_DOWNLOAD_URL=https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/$CERT_ZIPFILE
-VMWARE_FILE=VMware-Horizon-Client-5.5.2-18035020.x64.bundle
-VMWARE_DOWNLOAD=https://download3.vmware.com/software/view/viewclients/CART21FQ3/$VMWARE_FILE
+VMWARE_FILE=VMware-Horizon-Client-2206-8.6.0-20094634.x64.bundle
+VMWARE_DOWNLOAD=https://download3.vmware.com/software/CART23FQ2_LIN64_2206/$VMWARE_FILE
 VMWARE_PKCS_DIR=/usr/lib/vmware/view/pkcs11
 CERT_DIR=/usr/local/share/ca-certificates/dod/
 DA_CERT_DIR=/usr/share/ca-certificates/
@@ -23,7 +23,6 @@ SYM_LINK_FOLDER=/usr/lib/vmware/view/pkcs11
 LINK_TARGET=/usr/lib/x86_64-linux-gnu/opensc-pkcs11.so
 LINK_NAME=libopenscpkcs11.so
 cert_install_required=false
-
 
 # Function removes temporary directories used.  Typically executed when the script fails or at the very end.
 cleanup () {
@@ -369,11 +368,11 @@ install_cert_steps() {
 check_if_root
 check_dependencies #My Ubuntu install contained everything needed. Minimal install could be different.
 install_card_tools
+install_vmware
+create_symbolic_link_to_OpenSC_module
 check_if_gateway_accessible
 install_cert_steps #uses several helper functions
 check_gateway_again
-install_vmware
-create_symbolic_link_to_OpenSC_module
 cleanup
 install_complete
 echo DONE
